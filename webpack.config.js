@@ -1,14 +1,18 @@
 module.exports = {
-	devtool: 'sourcemap',
-	output: {
-		filename: 'bundle.js'
-	},
-	module: {
+	  devtool: 'source-map',
+    resolve:{
+        extensions: ['', '.js', '.ts']
+    },
+	  output: {
+		    filename: 'bundle.js'
+	  },
+	  module: {
 		loaders: [
-			 { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'babel' },
-       { test: /\.html$/, loader: 'raw' },
-			 { test: /\.styl$/, loader: 'style!css!stylus' },
-			 { test: /\.css$/, loader: 'style!css' }
+			  { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'babel' },
+			  { test: /\.ts$/, exclude: [/app\/lib/, /node_modules/], loader: 'awesome-typescript-loader?module=commonjs' },
+        { test: /\.html$/, loader: 'raw' },
+			  { test: /\.styl$/, loader: 'style!css!stylus' },
+			  { test: /\.css$/, loader: 'style!css' }
 		]
-	}
+	  }
 };
