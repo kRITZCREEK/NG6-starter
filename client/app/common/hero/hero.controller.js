@@ -1,11 +1,10 @@
-import foo from './foo';
+import {barGreet} from './bar';
 
 class HeroController {
 	constructor(){
 		  this.name = 'hero';
-      foo.greet('hello');
+      barGreet('hello');
 	}
 }
-
 
 export default HeroController;
