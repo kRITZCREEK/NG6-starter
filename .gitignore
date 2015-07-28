@@ -6,3 +6,4 @@ client/bundle.js
 client/bundle.js.map
 .idea
 typings
+/.projectile

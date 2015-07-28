@@ -1,4 +1,4 @@
-import {greet} from './foo.ts';
+import {greet} from './foo';
 
 export function barGreet(x:string){
     greet("WHAT?");
