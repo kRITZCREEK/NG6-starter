@@ -33,13 +33,13 @@ var paths = {
 		resolveToApp('**/*.html'),
 		path.join(root, 'index.html')
 	],
-		
-	entry: path.join(root, 'app/app.js'),
+
+	entry: path.join(root, 'app/app.ts'),
 	output: root,
 	blankTemplates: path.join(__dirname, 'generator', 'component/**/*.**')
 };
 
-// use our webpack.config.js to 
+// use our webpack.config.js to
 // build our modules
 gulp.task('webpack', function(){
 	return gulp.src(paths.entry)
