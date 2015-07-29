@@ -3,9 +3,9 @@
 import * as angular from 'angular';
 
 var uiRouter : angular.ui.IState = require('angular-ui-router');
-var Common = require('./common/common');
 var Components = require('./components/components');
-import * as AppComponent from './app.component';
+import AppComponent from './app.component';
+var Common = require('./common/common').default;
 
 require('normalize.css');
 
@@ -14,4 +14,4 @@ angular.module('app', [
     Common.name,
     Components.name
 ])
-.directive('app', AppComponent.appComponent);
+.directive('app', AppComponent);
