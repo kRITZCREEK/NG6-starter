@@ -1,6 +1,6 @@
-import template from './about.html';
+var template = require('./about.html');
 import controller from './about.controller';
-import './about.styl';
+require('./about.styl');
 
 let aboutComponent = function(){
 	return {

@@ -1,4 +1,4 @@
-import angular from 'angular';
+import * as angular from 'angular';
 import UserFactory from './user.factory';
 
 let userModule = angular.module('user', [])

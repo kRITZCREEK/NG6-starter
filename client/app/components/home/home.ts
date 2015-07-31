@@ -1,11 +1,11 @@
-import angular from 'angular';
-import uiRouter from 'angular-ui-router';
+import * as angular from 'angular';
+var uiRouter : string = require('angular-ui-router');
 import homeComponent from './home.component'; 
 
 let homeModule = angular.module('home', [
 	uiRouter
 ])
-.config(($stateProvider, $urlRouterProvider)=>{
+.config(($stateProvider : angular.ui.IStateProvider, $urlRouterProvider : angular.ui.IUrlRouterProvider)=>{
 	$urlRouterProvider.otherwise('/');
 	
 	$stateProvider

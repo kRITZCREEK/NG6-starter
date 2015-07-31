@@ -1,5 +1,7 @@
 let UserFactory = function(){
-	const user = {};
+	const user = {
+		isSignedIn: true
+	};
 	
 	let getUser = ()=>{
 		return user;			

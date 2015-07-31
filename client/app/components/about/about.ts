@@ -1,11 +1,11 @@
-import angular from 'angular';
-import uiRouter from 'angular-ui-router';
+import * as angular from 'angular';
+var uiRouter : string =  require('angular-ui-router');
 import aboutComponent from './about.component'; 
 
 let aboutModule = angular.module('about', [
 	uiRouter
 ])
-.config(($stateProvider)=>{
+.config(($stateProvider : angular.ui.IStateProvider)=>{
 	$stateProvider
 		.state('about', {
 			url: '/about',

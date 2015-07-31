@@ -2,10 +2,10 @@
 
 import * as angular from 'angular';
 
-var uiRouter : angular.ui.IState = require('angular-ui-router');
+var uiRouter : string = require('angular-ui-router');
 import Components from './components/components';
 import AppComponent from './app.component';
-var Common = require('./common/common').default;
+import Common from './common/common';
 
 require('normalize.css');
 

@@ -1,6 +1,6 @@
 import * as angular from 'angular';
-var Home = require('./home/home');
-var About = require('./about/about'); 
+import Home from './home/home';
+import About from './about/about'; 
 
 let componentModule = angular.module('app.components', [
 	Home.name,

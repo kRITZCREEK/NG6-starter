@@ -2,8 +2,8 @@
 
 import * as angular from 'angular';
 import Navbar from './navbar/navbar';
-var Hero = require('./hero/hero');
-var User = require('./user/user');
+import Hero from './hero/hero';
+import User from './user/user';
 
 let commonModule = angular.module('app.common', [
 	Navbar.name,
