@@ -6,5 +6,11 @@
 <main>
 	<div>
 		<h1>you can find me in {{ vm.name }}.html</h1>
+		<button ng-click="vm.getTasks()"> TASKS </button>
+    <ul>
+        <li ng-repeat="task in vm.tasks">
+          {{task.description}}
+        </li>
+    </ul>
 	</div>
 </main>
