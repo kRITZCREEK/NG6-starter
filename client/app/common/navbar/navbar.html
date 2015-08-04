@@ -1,8 +1,19 @@
 <nav class="navbar">
-	<div class="logo">
-		<h1><a ui-sref="home">{{ vm.name }}</a></h1>
-	</div>
-	<div class="nav-links">
-		<span><a ui-sref="about">about</a></span>
-	</div>
+
+    <div class="ui menu">
+        <a class="active item" ui-sref="home">
+            {{ "Tasklist" }}
+        </a>
+        <a class="item" ui-sref="about">
+            About
+        </a>
+        <div class="right menu">
+            <div class="item">
+                <div class="ui transparent icon input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 </nav>

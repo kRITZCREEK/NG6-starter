@@ -7,3 +7,5 @@ client/bundle.js.map
 .idea
 typings
 /.projectile
+
+semantic/dist

@@ -1,17 +1,18 @@
 <!--if you'd like to have the navbar and or header on every page, move it up a level to app.html!-->
-<navbar></navbar>
-<header>
+<!--<header>
 	<hero></hero>
-</header>
-<main>
-	<div>
-        <h1>Tasklist</h1>
-		<button ng-click="vm.getTasks()"> TASKS </button>
-    <ul>
-        <li ng-repeat="task in vm.tasks">
-          {{task.name}} <br>
-            {{task.created}}
-        </li>
-    </ul>
-	</div>
+</header>-->
+<main class="columns">
+    <div class="column column-tasklist">
+        <div class="column-wrapper">
+            <div class="column-header">
+                <h1>Tasklist</h1>
+            </div>
+            <div class="column-content">
+                <tasklist></tasklist>
+            </div>
+        </div>
+    </div>
+    <div class="column task-detail">
+    </div>
 </main>
