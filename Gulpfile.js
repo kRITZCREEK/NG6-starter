@@ -27,7 +27,7 @@ var root = 'client';
 // map of all our paths
 var paths = {
 	js: resolveToComponents('**/*!(.spec.js).js'), // don't include spec files
-	ts: resolveToComponents('**/*!(.spec.ts).ts'), // don't include spec files
+	ts: resolveToApp('**/*!(.spec.ts).ts'), // don't include spec files
 	styl: resolveToApp('**/*.styl'), // our stylus files
 	html: [
 		resolveToApp('**/*.html'),

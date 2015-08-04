@@ -1,18 +1,18 @@
 import {
-    Task,
+    ITask,
     ICamundaService
 } from '../../common/services/camundaService/camundaService';
 
 class HomeController {
-    name : string;
-    tasks: Task[];
+    camundaEngineRoute:string;
+    tasks: ITask[];
 
-    constructor(private camundaService : ICamundaService){
-        this.name = 'home';
-    }
+    static $inject = ['camundaService'];
+
+    constructor(private camundaService : ICamundaService){ }
 
     getTasks() {
-        this.camundaService.getAllTasks().then((tasks : Task[]) => {
+        this.camundaService.getAllTasks().then((tasks : ITask[]) => {
             this.tasks = tasks;
         })
     }

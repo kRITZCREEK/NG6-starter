@@ -5,11 +5,12 @@
 </header>
 <main>
 	<div>
-		<h1>you can find me in {{ vm.name }}.html</h1>
+        <h1>Tasklist</h1>
 		<button ng-click="vm.getTasks()"> TASKS </button>
     <ul>
         <li ng-repeat="task in vm.tasks">
-          {{task.description}}
+          {{task.name}} <br>
+            {{task.created}}
         </li>
     </ul>
 	</div>
