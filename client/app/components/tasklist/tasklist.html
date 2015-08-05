@@ -22,24 +22,21 @@
     </div>
 
     <div class="ui divided items">
-        <div class="item">
+        <div class="item" ng-repeat="task in vm.tasks">
             <div class="content Tasklist--item-content">
-                <a class="header">Assign Approver</a>
+                <a class="header">{{task.name}}</a>
 
                 <div class="Tasklist--item-priority">
-                    50
+                    {{task.priority}}
                 </div>
 
                 <div class="meta">
-                    Invoice Receipt
-                </div>
-                <div class="description">
-                    <p></p>
+                    {{task.description}}
                 </div>
                 <div class="ui grid Tasklist--details">
                     <div class="row two column">
-                        <div class="column"><i class="bookmark icon"></i>36min ago</div>
-                        <div class="column"><i class="wait icon"></i>in 3 days</div>
+                        <div class="column"><i class="bookmark icon"></i>{{vm.prettyDate(task.created)}}</div>
+                        <div class="column"><i class="wait icon"></i>{{vm.prettyDate(task.due)}}</div>
                     </div>
                     <div class="row">
                         <div class="column"><i class="user icon"></i>Demo Demo</div>

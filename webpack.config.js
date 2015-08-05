@@ -14,6 +14,7 @@ module.exports = {
 			  { test: /\.styl$/, loader: 'style!css!stylus' },
 			  { test: /\.css$/, loader: 'style!css' },
 			  { test: /\.png$/, loader: 'url-loader' },
+			  { test: /\.json$/, loader: 'json-loader' },
 			  { test: /\.(otf|eot|svg|ttf|woff|woff2)$/, loader: 'url-loader' }
 		]
 	  }

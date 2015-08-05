@@ -6,11 +6,19 @@ let homeModule = angular.module('home', [
     uiRouter
 ])
     .config(($stateProvider:angular.ui.IStateProvider, $urlRouterProvider:angular.ui.IUrlRouterProvider) => {
-        $urlRouterProvider.otherwise('/');
+        //$urlRouterProvider.otherwise('/');
         $stateProvider
             .state('home', {
-                url: '/',
+                url: '/task',
                 template: '<home></home>'
+            })
+            .state('home.detail', {
+                url: '/:taskId',
+                views:{
+                    'detail':{
+                        template: '<task-detail></task-detail>'
+                    }
+                }
             });
     })
     .directive('home', homeComponent);

@@ -1,8 +1,7 @@
 import * as angular from 'angular';
+var mockData = require('./data.json');
 
 // Reference: http://docs.camunda.org/latest/api-references/rest/#task
-
-export enum DelegationState {RESOLVED, PENDING}
 
 let exampleTask =
 {
@@ -12,7 +11,7 @@ let exampleTask =
     created: new Date("2013-01-23T13:42:42"),
     due: new Date("2013-01-23T13:49:42"),
     followUp: new Date("2013-01-23T13:44:42"),
-    delegationState: DelegationState.RESOLVED,
+    delegationState: "RESOLVED",
     description: "aDescription",
     executionId: "anExecution",
     owner: "anOwner",
@@ -33,7 +32,7 @@ export interface ITask {
     created:Date, // The time the task was created. Format yyyy-MM-dd'T'HH:mm:ss.
     due:Date, // The due date for the task. Format yyyy-MM-dd'T'HH:mm:ss.
     followUp:Date, // The follow-up date for the task. Format yyyy-MM-dd'T'HH:mm:ss.
-    delegationState:DelegationState, // The delegation state of the task. Corresponds to the DelegationState enum in the engine. Possible values are RESOLVED and PENDING.
+    delegationState:string, // The delegation state of the task. Corresponds to the DelegationState enum in the engine. Possible values are RESOLVED and PENDING.
     description:string, // The task description.
     executionId:string, // The id of the execution the task belongs to.
     owner:string, // The owner of the task.
@@ -49,6 +48,7 @@ export interface ITask {
 
 export interface ICamundaService {
     getAllTasks(): angular.IPromise<ITask[]>;
+    getNTasks(n:number): angular.IPromise<ITask[]>;
 }
 
 class CamundaService implements ICamundaService {
@@ -58,6 +58,11 @@ class CamundaService implements ICamundaService {
     }
 
     getAllTasks() {
+        var deferred = this.$q.defer();
+        deferred.resolve(<ITask[]> mockData);
+        return deferred.promise;
+    }
+    getNTasks(n:number){
         var deferred = this.$q.defer();
         deferred.resolve([<ITask> exampleTask]);
         return deferred.promise;
