@@ -16,6 +16,12 @@
     },
     "chai/chai.d.ts": {
       "commit": "77ec1408257c677f8fd8d6798ebaf6bd87c11b9d"
+    },
+    "moment/moment.d.ts": {
+      "commit": "147cc7a8b375d97bf82afb34614268bbb77d18d5"
+    },
+    "moment/moment-node.d.ts": {
+      "commit": "147cc7a8b375d97bf82afb34614268bbb77d18d5"
     }
   }
 }

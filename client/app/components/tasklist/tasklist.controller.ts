@@ -23,7 +23,7 @@ class TasklistController {
     }
 
     prettyDate(s:string):string{
-        return moment(s).fromNow()
+        return moment(s).fromNow();
     }
 }
 
