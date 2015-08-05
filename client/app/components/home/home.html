@@ -1,7 +1,4 @@
 <!--if you'd like to have the navbar and or header on every page, move it up a level to app.html!-->
-<!--<header>
-	<hero></hero>
-</header>-->
 <main class="columns">
     <div class="column column-tasklist">
         <div class="column-wrapper">
@@ -14,6 +11,13 @@
         </div>
     </div>
     <div class="column task-detail">
-        <div ui-view="detail"></div>
+        <div class="column-wrapper">
+            <div class="column-header">
+                <h1>Taskdetail</h1>
+            </div>
+            <div class="column-content">
+                <div ui-view="detail"></div>
+            </div>
+        </div>
     </div>
 </main>
