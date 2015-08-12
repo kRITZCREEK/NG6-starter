@@ -1,9 +1,8 @@
-var template = require('./home.html');
-require('./home.styl');
-
+import template from './home.html';
+import './home.styl';
 import controller from './home.controller';
 
-let homeComponent = function() : angular.IDirective{
+let homeComponent = function() {
 	return {
 		template,
 		controller,

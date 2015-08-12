@@ -1,9 +1,9 @@
-import * as angular from 'angular';
-var uiRouter = require('angular-ui-router');
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
 import tasklistComponent from './tasklist.component';
 
 let tasklistModule = angular.module('tasklist', [
-	uiRouter
+  uiRouter
 ])
 .directive('tasklist', tasklistComponent);
 

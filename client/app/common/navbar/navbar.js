@@ -1,7 +1,5 @@
-/// <reference path="../../../../typings/tsd.d.ts" />
-
-import * as angular from 'angular';
-var uiRouter : string = require('angular-ui-router');
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
 import navbarComponent from './navbar.component';
 
 let navbarModule = angular.module('navbar', [

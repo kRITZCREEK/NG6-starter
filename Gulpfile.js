@@ -27,14 +27,13 @@ var root = 'client';
 // map of all our paths
 var paths = {
 	js: resolveToComponents('**/*!(.spec.js).js'), // don't include spec files
-	ts: resolveToApp('**/*!(.spec.ts).ts'), // don't include spec files
 	styl: resolveToApp('**/*.styl'), // our stylus files
 	html: [
 		resolveToApp('**/*.html'),
 		path.join(root, 'index.html')
 	],
 
-	entry: path.join(root, 'app/app.ts'),
+	entry: path.join(root, 'app/app.js'),
 	output: root,
 	blankTemplates: path.join(__dirname, 'generator', 'component/**/*.**')
 };
@@ -61,7 +60,6 @@ gulp.task('serve', function(){
 gulp.task('watch', function(){
 	var allPaths = [].concat(
 		[paths.js],
-		[paths.ts],
 		paths.html,
 		[paths.styl]
 	);

@@ -1,5 +1,4 @@
 class AboutController {
-  name : string;
 	constructor(){
 		this.name = 'about';
 	}

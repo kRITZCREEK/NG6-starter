@@ -1,13 +1,10 @@
-/// <reference path="../../typings/tsd.d.ts" />
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
 
-import * as angular from 'angular';
-
-var jquery : any = require('jquery');
-(<any>window).jQuery = jquery;
-
+import jquery from 'jquery';
+window.jQuery = jquery;
 import '../../semantic/dist/semantic.min.css';
 
-var uiRouter : string = require('angular-ui-router');
 import Components from './components/components';
 import AppComponent from './app.component';
 import Common from './common/common';

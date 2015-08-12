@@ -1,4 +1,4 @@
-var template = require('./tasklist.html');
+import template from './tasklist.html';
 import controller from './tasklist.controller';
 import './tasklist.styl';
 

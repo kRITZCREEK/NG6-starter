@@ -1,6 +1,6 @@
-var template = require('./taskDetail.html');
+import template from './taskDetail.html';
 import controller from './taskDetail.controller';
-require('./taskDetail.styl');
+import './taskDetail.styl';
 
 let taskDetailComponent = function(){
 	  return {

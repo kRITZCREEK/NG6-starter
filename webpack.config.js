@@ -1,7 +1,7 @@
 module.exports = {
 	  devtool: 'source-map',
     resolve:{
-        extensions: ['', '.js', '.ts']
+        extensions: ['', '.js']
     },
 	  output: {
 		    filename: 'bundle.js'
@@ -9,7 +9,6 @@ module.exports = {
 	  module: {
 		loaders: [
 			  { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'babel' },
-			  { test: /\.ts$/, exclude: [/app\/lib/, /node_modules/], loader: 'awesome-typescript-loader?module=commonjs' },
 			  { test: /\.html$/, loader: 'raw' },
 			  { test: /\.styl$/, loader: 'style!css!stylus' },
 			  { test: /\.css$/, loader: 'style!css' },

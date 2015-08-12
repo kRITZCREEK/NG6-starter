@@ -1,15 +1,13 @@
-import * as angular from 'angular';
+import angular from 'angular';
 
 class TaskDetailController {
-    name: string;
-    taskId: string;
-    static $inject = ['$scope', '$stateParams']
-	  constructor($scope : angular.IScope, $stateParams : any){
+	  constructor($scope, $stateParams){
 		    this.name = 'taskDetail';
         this.taskId = $stateParams.taskId;
         console.log($stateParams)
 	  }
 }
 
+TaskDetailController.$inject = ['$scope', '$stateParams'];
 
 export default TaskDetailController;
