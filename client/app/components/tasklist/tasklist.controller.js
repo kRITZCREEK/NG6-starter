@@ -8,9 +8,7 @@ class TasklistController {
     }
 
     getTasks() {
-        this.camundaService.getAllTasks().then(tasks => {
-            this.tasks = tasks;
-        })
+        this.camundaService.getAllTasks().then(tasks => this.tasks = tasks);
     }
 
     prettyDate(s) {

@@ -5,5 +5,5 @@ export default function appComponent () {
     return {
         restrict: 'E',
         template: template
-    }
+    };
 };

@@ -6,7 +6,7 @@ let homeModule = angular.module('home', [
     uiRouter
 ])
     .config(($stateProvider, $urlRouterProvider) => {
-        //$urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/task');
         $stateProvider
             .state('home', {
                 url: '/task',

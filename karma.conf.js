@@ -27,6 +27,15 @@ module.exports = function(config) {
         'spec.bundle.js': ['webpack', 'sourcemap']
     },
 
+      plugins: [
+          require('karma-webpack'),
+          require('karma-sourcemap-loader'),
+          require('karma-mocha'),
+          require('karma-mocha-reporter'),
+          require('karma-chai'),
+          require('karma-chrome-launcher')
+      ],
+
     webpack: {
         devtool: 'inline-source-map',
         module: {

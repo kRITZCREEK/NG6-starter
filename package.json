@@ -33,7 +33,6 @@
     "lodash": "^3.8.0",
     "map-stream": "0.0.6",
     "moment": "^2.10.6",
-    "normalize.css": "^3.0.3",
     "require-dot-file": "^0.4.0",
     "yamljs": "^0.2.3"
   },
@@ -49,7 +48,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-template": "^3.0.0",
     "json-loader": "^0.5.2",
-    "karma": "^0.12.31",
+    "karma": "^0.13.2",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.1.12",
     "karma-mocha": "^0.1.10",

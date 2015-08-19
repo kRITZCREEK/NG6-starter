@@ -63,7 +63,6 @@ gulp.task('watch', function(){
 		paths.html,
 		[paths.styl]
 	);
-		
 
 	gulp.watch(allPaths, ['webpack', reload]);
 });
@@ -72,11 +71,11 @@ gulp.task('component', function(){
 	var cap = function(val){
 		return val.charAt(0).toUpperCase() + val.slice(1);
 	};
-	
+
 	var name = yargs.name;
 	var parentPath = yargs.parent || '';
 	var destPath = path.join(resolveToComponents(), parentPath, name);
-	
+
 	return gulp.src(paths.blankTemplates)
 		.pipe(template({
 			name: name,
